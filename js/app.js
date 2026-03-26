@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:5000/api/menu";
+const apiUrl = `${window.location.origin}/api/menu`;
 const menuContainer = document.getElementById("menuContainer");
 
 let allItems = [];
@@ -156,7 +156,7 @@ function selectSubCategory(subCategory) {
 
 function createImageBlock(item) {
     if (item.imagePath) {
-        const imageUrl = `http://localhost:5000${item.imagePath}`;
+        const imageUrl = `${window.location.origin}${item.imagePath}`;
         return `
             <div class="menu-image-wrap">
                 <img
