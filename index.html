@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Вітрина меню "Avero"</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/app.js" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=3" />
+  <script src="js/app.js?v=20" defer></script>
 </head>
 <body>
   <header class="hero">
@@ -38,6 +38,37 @@
     </div>
   </section>
 </main>
+
+<button id="cartToggleBtn" class="cart-toggle-btn">
+  Кошик(<span id="cartCount">0</span>)
+</button>
+
+<div id="cartOverlay" class="cart-overlay hidden"></div>
+
+  <aside id="cartSidebar" class="cart-sidebar hidden">
+    <div class="cart-header">
+      <h3>Ваше замовлення</h3>
+      <button id="closeCartBtn" class="cart-close-btn">X</button>
+    </div>
+    
+    <div class="cart-form">
+      <input type="text" id="customerNameInput" placeholder="Ваше ім'я (необов'язково)" />
+      <textarea id="commentInput" placeholder="Коментар до замовлення"></textarea>
+    </div>
+
+    <div id="cartItems" class="cart-items">
+      <p class="cart-empty">Кошик порожній</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Сума:</span>
+        <strong id="cartTotal">0 грн</strong>
+      </div>
+      <button id="checkoutBtn" class="checkout-btn">Оформити замовлення</button>
+    </div>
+  </aside>
+
 
 <footer class="site-footer">
   <div class="container footer-content">
